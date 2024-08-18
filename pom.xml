@@ -13,29 +13,6 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <!-- <build>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <!-- Here come other details
-          ...
-          -->
-          <configuration>
-            <archive>
-              <manifest>
-                <addClasspath>true</addClasspath>
-                <mainClass>telran.stream.Main</mainClass>
-              </manifest>
-            </archive>
-          </configuration>
-          <!-- Here come other details
-          ...
-          -->
-        </plugin>
-      </plugins>
-  </build> -->
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
