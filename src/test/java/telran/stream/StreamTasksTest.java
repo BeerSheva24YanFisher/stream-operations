@@ -2,6 +2,7 @@ package telran.stream;
 
 import java.util.Arrays;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
@@ -14,8 +15,9 @@ public class StreamTasksTest {
         int[] newArr = StreamTasks.shuffle(arr);
         
         assertFalse(Arrays.equals(arr,newArr));
-        assertTrue(Arrays.stream(arr).allMatch(x-> Arrays.stream(newArr).anyMatch(y->x==y)) && 
-                Arrays.stream(newArr).allMatch(x -> Arrays.stream(arr).anyMatch(y -> x == y)));
+        Arrays.sort(arr);
+        Arrays.sort(newArr);
+        assertArrayEquals(arr, newArr);
     }
 
 }
